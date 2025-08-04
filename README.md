@@ -2,37 +2,37 @@
     <img src="https://applitools.com/wp-content/uploads/2020/08/Selenium_Hex-1.svg" width="50">
   &nbsp;&nbsp;&nbsp;
  <img src="https://gorsel.isbank.com.tr/sttk/StaticFiles/Isbank/images/logo/isbankDlogo.png" width="105">
-  &nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;
 </p>
 
 
 
-<h1 align="center">🧪 İs Bankası Web UI Otomasyon Projesi</h1>
+<h1 align="center">İs Bankası Web UI Otomasyon Projesi</h1>
 
 
-## 📂 İçindekiler
+##  İçindekiler
 
-- [📘 Proje Açıklaması](#-proje-açıklaması)
-- [🚀 Kullanılan Teknolojiler](#-kullanılan-teknolojiler)
-- [📁 Proje Yapısı](#-proje-yapısı)
-- [📁 Test Senaryolari](#-test-senaryolari)
-- [📊 Extent Reports
-- [🙏 Teşekkürler](#-teşekkürler)
+- [ Proje Açıklaması](#-proje-açıklaması)
+- [ Kullanılan Teknolojiler](#-kullanılan-teknolojiler)
+- [ Proje Yapısı](#-proje-yapısı)
+- [ Test Senaryolari](#-test-senaryolari)
+- [ Extent Reports
+- [ Teşekkürler](#-teşekkürler)
 
 
 
-## 📘 Proje Açıklaması
+##  Proje Açıklaması
 
 Bu proje, **İs Bankası Web arayüzü** üzerinde uçtan uca testlerin otomasyonunu sağlamak amacıyla oluşturulmuştur.  
 Modern test mühendisliği yaklaşımlarından biri olan **BDD (Behavior Driven Development)** yaklaşımı kullanılmıştır.
 Kullanılan test mimarisi içerisinde:
-* ✅ Selenium WebDriver ile web etkileşimleri gerçekleştirilmekte,
-* ✅ TestNg ile testlerin entegrasyonu sağlanmakta,
-* ✅ Extent Reporter ile detaylı test çıktıları görsel olarak sunulmakta,
+*  Selenium WebDriver ile web etkileşimleri gerçekleştirilmekte,
+*  TestNg ile testlerin entegrasyonu sağlanmakta,
+*  Extent Reporter ile detaylı test çıktıları görsel olarak sunulmakta,
 
 
 
-## 🚀 Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
 | Teknoloji      | Versiyon | Açıklama |
 |----------------|----------|----------|
@@ -43,9 +43,9 @@ Kullanılan test mimarisi içerisinde:
 | ExtentReports  | 5.1.1    | HTML test raporları |
 
 
-## 📁 Proje Yapısı
+##  Proje Yapısı
 
-## 📁 Proje Yapısı
+##  Proje Yapısı
 
 ```text
 src/
@@ -80,7 +80,7 @@ src/
        └── config.properties
 
 
-### 📁 Geliştirme Notları
+###  Geliştirme Notları
 
 * Proje **Page Object Model (POM)** mimarisiyle yapılandırılmıştır. Sayfa aksiyonları `pageObjects/` klasöründe, yardımcı sınıflar ise `helpers/` altında toplanmıştır.
 * `WaitHelper`, `ScrollHelper`, `LoanCalculator` gibi yardımcı sınıflar ile tekrar eden işlemler modüler hale getirilmiştir.
@@ -90,42 +90,7 @@ src/
 * TestNG framework'ü kullanılmakta olup, test sınıfları `test/java/test/` dizininde yer almaktadır.
 * `resources/` klasöründeki yapılandırmalar sayesinde proje esnek ve sürdürülebilir hale getirilmiştir.
 
----
-
-## ⚠️ ChromeDriver Sürüm Uyarısı
-
-Bu projede kullanılan Selenium testlerinin sağlıklı çalışabilmesi için **Chrome tarayıcınız ile uyumlu bir ChromeDriver** kullanmanız gerekmektedir.
-
-Eğer testleri çalıştırırken `SessionNotCreatedException`, `invalid session id`, `chrome not reachable` gibi hatalar alıyorsanız büyük olasılıkla ChromeDriver sürümünüz, Chrome tarayıcınızla uyumlu değildir.
-
-### ✅ Uyumlu ChromeDriver Nasıl İndirilir?
-
-1. **Chrome sürümünüzü öğrenin**  
-   - Chrome'u açın ve şu yolu izleyin: `Ayarlar` > `Chrome Hakkında`  
-   - Örneğin: `117.0.5938.132`
-
-2. **ChromeDriver sürümünü seçin**  
-   - Aşağıdaki bağlantıdan tarayıcınıza uygun ChromeDriver sürümünü bulun ve indirin:  
-     🔗 [ChromeDriver Sürüm Seçimi](https://developer.chrome.com/docs/chromedriver/downloads/version-selection?hl=tr)
-
-3. **Projeye yerleştirin**  
-   - İndirdiğiniz `chromedriver.exe` (veya `chromedriver`) dosyasını aşağıdaki dizine koyun ve eski dosyayla değiştirin:
-
-     ```
-     src/java/drivers/
-     ```
-
-4. **Testleri yeniden çalıştırın**
-
----
-
-📌 Not: Chrome ve ChromeDriver sürümleri senkronize değilse, testler çalışmaz veya beklenmedik hatalar oluşabilir. Bu nedenle her zaman sürüm uyumuna dikkat ediniz.
-
-## 🙏 Teşekkürler
-
-
-
-
+##  Teşekkürler
 
 
 <br/>

@@ -17,8 +17,6 @@ public class LoanCalculator {
 
         double rawResult = (Math.pow(totalRate, loanTerm) * (totalRate - 1) / (Math.pow(totalRate, loanTerm) - 1)) * loanAmount;
 
-        // aşağı yuvarlama (truncate)
-
         return new BigDecimal(rawResult)
                 .setScale(2, RoundingMode.HALF_UP)
                 .doubleValue();

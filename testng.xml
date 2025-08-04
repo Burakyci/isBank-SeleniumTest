@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="tests" thread-count="2">
     <test thread-count="5" name="Test1">
         <classes>
-            <class name="test.LoanCalculationTest"/> <!-- LoanCalculationTest buraya eklendi -->
+            <class name="test.LoanCalculationTest"/>
         </classes>
     </test>
 

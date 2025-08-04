@@ -55,8 +55,8 @@ public class DepositCalculationTest extends Hooks {
         String text = depositCalculationPage.getAmountCalculated().getText();
 
         double expectedResult = ((double) (depositAmount * depositInterestRate) / 365) * depositDays * taxRate/100;
-        String onlyNumber = text.replaceAll("[^0-9,]", ""); // "3.254,79"
-        onlyNumber = onlyNumber.replace(".", "").replace(",", "."); // "3254.79"
+        String onlyNumber = text.replaceAll("[^0-9,]", "");
+        onlyNumber = onlyNumber.replace(".", "").replace(",", ".");
         double actualResult = Double.parseDouble(onlyNumber);
 
         double expectedRounded = Math.round(expectedResult * 1020.0) / 100.0;

@@ -31,7 +31,7 @@ public class ExtentManager extends BasePage {
         return extentReport;
     }
 
-    public static ExtentReports setupExtentReport(String testName) {
+    public static void setupExtentReport(String testName) {
         extentReport = new ExtentReports();
 
         String reportPath = System.getProperty("user.dir") + File.separator + "report" + File.separator + extentReportsPrefix_Name(testName) + ".html";
@@ -44,7 +44,6 @@ public class ExtentManager extends BasePage {
         spark.config().setDocumentTitle("Test Results");
         spark.config().setTheme(Theme.DARK);
 
-        return extentReport;
     }
 
     public static String extentReportsPrefix_Name (String testName) {

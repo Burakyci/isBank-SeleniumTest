@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-    private static Properties properties;
+    private static final Properties properties;
 
     static {
         try {
@@ -31,7 +31,4 @@ public class ConfigReader {
         return Double.parseDouble(getProperty(key));
     }
 
-    public static boolean getBooleanProperty(String key) {
-        return Boolean.parseBoolean(getProperty(key));
-    }
 }

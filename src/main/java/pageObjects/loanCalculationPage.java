@@ -15,9 +15,6 @@ public class loanCalculationPage extends BasePage {
     public By monthlyTermAmount = By.id("totalAmountField");
 
 
-
-
-
     public loanCalculationPage() throws IOException {
         super();
     }

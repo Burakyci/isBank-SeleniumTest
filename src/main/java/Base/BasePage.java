@@ -10,10 +10,6 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 import java.nio.file.Paths;
 
 
@@ -41,20 +37,16 @@ public class BasePage {
         return url;
     }
 
-    public static String takeSnapShot(String name) throws IOException {
+    public static void takeSnapShot(String name) throws IOException {
         File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 
         String destFile = System.getProperty("user.dir") + "/target/screenshots/" + timestamp() + ".png";
         screenShotDestinationPath = destFile;
-
-
         try {
             FileUtils.copyFile(srcFile, new File(destFile));
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        return name;
 
     }
 

@@ -68,7 +68,6 @@ public class LoanCalculationTest extends Hooks {
         );
 
 
-
         double  actualResult = Double.parseDouble(
                 loanCalculationPage.getMonthlyTermAmount().getText()
                         .replace(".", "")
@@ -77,11 +76,6 @@ public class LoanCalculationTest extends Hooks {
         );
 
         double expectedResult = calculator.loanCalculator(rate);
-
-
-        System.out.println( loanCalculationPage.getMonthlyTermAmount().getText()+"asdasdas"+actualResult);
-        System.out.println(expectedResult);
-
 
 
         try {

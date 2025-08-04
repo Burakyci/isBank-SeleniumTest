@@ -11,17 +11,16 @@ public class LoanCalculator {
         double kkdfRate = ConfigReader.getDoubleProperty("kkdfRate");
         double bsmvRate = ConfigReader.getDoubleProperty("bsmvRate");
 
-        double totalRate = new BigDecimal(((loanRate * (1 + kkdfRate + bsmvRate)) / 100) + 1)
+        double totalRate = BigDecimal.valueOf(((loanRate * (1 + kkdfRate + bsmvRate)) / 100) + 1)
                 .setScale(11, RoundingMode.HALF_UP)
                 .doubleValue();
 
         double rawResult = (Math.pow(totalRate, loanTerm) * (totalRate - 1) / (Math.pow(totalRate, loanTerm) - 1)) * loanAmount;
 
-        // Ondalık kısmı sil (ör: 11577.13 → 11577.0)
-        double result = new BigDecimal(rawResult)
-                .setScale(2, RoundingMode.HALF_UP)  // aşağı yuvarlama (truncate)
-                .doubleValue();
+        // aşağı yuvarlama (truncate)
 
-        return result;
+        return new BigDecimal(rawResult)
+                .setScale(2, RoundingMode.HALF_UP)
+                .doubleValue();
     }
 }

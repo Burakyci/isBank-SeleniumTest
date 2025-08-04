@@ -5,13 +5,7 @@
   &nbsp;&nbsp;&nbsp;
 </p>
 
-<p align="center">
 
-  <img src="https://img.shields.io/badge/Cucumber-BDD-23d160?style=flat-square&logo=cucumber" />
-  <img src="https://img.shields.io/badge/Allure-Report-orange?logo=allure" />
-  <img src="https://img.shields.io/badge/JUnit-4.13.2-blue?logo=junit5" />
-  <img src="https://img.shields.io/badge/Apache POI-Excel-green?logo=apache" />
-</p>
 
 <h1 align="center">🧪 İs Bankası Web UI Otomasyon Projesi</h1>
 
@@ -98,9 +92,39 @@ src/
 
 ---
 
+## ⚠️ ChromeDriver Sürüm Uyarısı
 
+Bu projede kullanılan Selenium testlerinin sağlıklı çalışabilmesi için **Chrome tarayıcınız ile uyumlu bir ChromeDriver** kullanmanız gerekmektedir.
+
+Eğer testleri çalıştırırken `SessionNotCreatedException`, `invalid session id`, `chrome not reachable` gibi hatalar alıyorsanız büyük olasılıkla ChromeDriver sürümünüz, Chrome tarayıcınızla uyumlu değildir.
+
+### ✅ Uyumlu ChromeDriver Nasıl İndirilir?
+
+1. **Chrome sürümünüzü öğrenin**  
+   - Chrome'u açın ve şu yolu izleyin: `Ayarlar` > `Chrome Hakkında`  
+   - Örneğin: `117.0.5938.132`
+
+2. **ChromeDriver sürümünü seçin**  
+   - Aşağıdaki bağlantıdan tarayıcınıza uygun ChromeDriver sürümünü bulun ve indirin:  
+     🔗 [ChromeDriver Sürüm Seçimi](https://developer.chrome.com/docs/chromedriver/downloads/version-selection?hl=tr)
+
+3. **Projeye yerleştirin**  
+   - İndirdiğiniz `chromedriver.exe` (veya `chromedriver`) dosyasını aşağıdaki dizine koyun ve eski dosyayla değiştirin:
+
+     ```
+     src/java/drivers/
+     ```
+
+4. **Testleri yeniden çalıştırın**
+
+---
+
+📌 Not: Chrome ve ChromeDriver sürümleri senkronize değilse, testler çalışmaz veya beklenmedik hatalar oluşabilir. Bu nedenle her zaman sürüm uyumuna dikkat ediniz.
 
 ## 🙏 Teşekkürler
+
+
+
 
 
 
